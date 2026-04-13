@@ -13,8 +13,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Pacifico&family=Inter:wght@400;500;600;700&display=swap');
        
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            scroll-behavior: smooth;   /* Makes clicking nav smooth */
         }
        
         .logo {
@@ -33,7 +34,6 @@
             transform: scale(1.04);
         }
 
-        /* Subtitle with nicer cursive */
         .subtitle {
             font-family: 'Pacifico', cursive;
             font-size: 2.35rem;
@@ -89,22 +89,20 @@
 </head>
 <body class="bg-zinc-950 text-white">
 
-    <!-- Navigation - Now clickable -->
+    <!-- Navigation -->
     <nav class="flex items-center justify-between px-8 py-6 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md fixed w-full z-50">
         <div class="flex items-center gap-2">
             <span class="logo">Danielle Romero</span>
         </div>
         <div class="flex items-center gap-8 text-sm font-medium">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="projects.html" class="nav-link">Projects</a>
-            <a href="blog.html" class="nav-link">Blog</a>
-            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero flex items-center">
+    <section id="home" class="hero flex items-center">
         <div class="hero-overlay absolute inset-0"></div>
         <div class="relative max-w-6xl mx-auto px-8 py-32 text-center z-10">
             <h1 class="logo">Danielle Romero</h1>
@@ -113,41 +111,44 @@
         </div>
     </section>
 
-    <!-- Rest of your content (About Me, Skills, Experience) remains the same -->
+    <!-- Main Content -->
     <main class="content-section">
         <div class="max-w-6xl mx-auto px-8 py-20">
-            <!-- About Me -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-                <div>
-                    <h2 class="text-5xl font-bold mb-6">About Me</h2>
-                    <p class="text-zinc-300 text-lg leading-relaxed mb-6">
-                        I'm a passionate creative developer and designer with over 5 years of experience
-                        building digital products that users love. I believe in the power of good design
-                        and clean code to solve real problems.
-                    </p>
-                    <p class="text-zinc-300 text-lg leading-relaxed mb-6">
-                        When I'm not coding, you'll find me exploring new design trends, contributing to
-                        open-source projects, or sharing my knowledge through writing and speaking at conferences.
-                    </p>
-                    <p class="text-zinc-300 text-lg leading-relaxed">
-                        I'm always excited to work on projects that challenge me to grow and learn something new.
-                    </p>
-                </div>
 
-                <!-- Cosmic Black Cat -->
-                <div class="relative flex justify-center lg:justify-end">
-                    <div class="relative">
-                        <img src="images/cosmic-cat.jpg" alt="Cosmic Black Cat"
-                             class="w-80 lg:w-96 rounded-2xl shadow-2xl drop-shadow-[0_0_40px_#c026d3] transition-all duration-500 hover:scale-105">
-                        <div class="absolute -top-8 -right-8 text-6xl text-violet-300 opacity-70 pointer-events-none">✦</div>
-                        <div class="absolute top-12 -left-10 text-5xl text-violet-300 rotate-12 pointer-events-none">✺</div>
-                        <div class="absolute bottom-12 right-20 text-7xl text-violet-300 pointer-events-none">✹</div>
+            <!-- About Me Section -->
+            <section id="about" class="mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-5xl font-bold mb-6">About Me</h2>
+                        <p class="text-zinc-300 text-lg leading-relaxed mb-6">
+                            I'm a passionate creative developer and designer with over 5 years of experience 
+                            building digital products that users love. I believe in the power of good design 
+                            and clean code to solve real problems.
+                        </p>
+                        <p class="text-zinc-300 text-lg leading-relaxed mb-6">
+                            When I'm not coding, you'll find me exploring new design trends, contributing to 
+                            open-source projects, or sharing my knowledge through writing and speaking at conferences.
+                        </p>
+                        <p class="text-zinc-300 text-lg leading-relaxed">
+                            I'm always excited to work on projects that challenge me to grow and learn something new.
+                        </p>
+                    </div>
+
+                    <!-- Cosmic Black Cat -->
+                    <div class="relative flex justify-center lg:justify-end">
+                        <div class="relative">
+                            <img src="images/cosmic-cat.jpg" alt="Cosmic Black Cat"
+                                 class="w-80 lg:w-96 rounded-2xl shadow-2xl drop-shadow-[0_0_40px_#c026d3] transition-all duration-500 hover:scale-105">
+                            <div class="absolute -top-8 -right-8 text-6xl text-violet-300 opacity-70 pointer-events-none">✦</div>
+                            <div class="absolute top-12 -left-10 text-5xl text-violet-300 rotate-12 pointer-events-none">✺</div>
+                            <div class="absolute bottom-12 right-20 text-7xl text-violet-300 pointer-events-none">✹</div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Skills & Technologies -->
-            <div class="mb-24">
+            <!-- Skills Section -->
+            <section id="skills">
                 <h2 class="text-4xl font-bold mb-10">Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
@@ -179,31 +180,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Experience -->
-            <div>
-                <h2 class="text-4xl font-bold mb-10">Experience</h2>
-                <div class="relative pl-12">
-                    <div class="absolute left-6 top-8 bottom-8 w-1 bg-violet-400 rounded-full"></div>
-                    <div class="flex gap-8 mb-16 relative">
-                        <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
-                        <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
-                            <h3 class="text-xl font-semibold">OJT Tax</h3>
-                            <p class="text-violet-400 mb-4">RS Bernaldo Associates</p>
-                            <p class="text-zinc-300">Intern.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-8 relative">
-                        <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
-                        <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
-                            <h3 class="text-xl font-semibold">Accounting</h3>
-                            <p class="text-violet-400 mb-4">RS Bernaldo Associates</p>
-                            <p class="text-zinc-300">Intern.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
 
