@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | rckstar</title>
+    <title>rckstar | Creative Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-       <style>
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@700;800;900&display=swap');
         
         body { 
@@ -17,7 +17,7 @@
             font-family: 'Raleway', sans-serif;
             font-weight: 900;
             letter-spacing: -0.05em;
-            font-size: 2.25rem;           /* bigger and bolder */
+            font-size: 2.25rem;
             background: linear-gradient(90deg, #c026d3, #a855f7, #c026d3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -36,14 +36,32 @@
         .nav-link:hover { 
             color: #c026d3; 
         }
+
+        /* Hero with Porsche Background */
+        .hero {
+            background-image: url('images/porsche-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
+        }
+
+        .content-section {
+            background: #18181b;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
     <!-- Navigation -->
-    <nav class="flex items-center justify-between px-8 py-6 border-b border-zinc-800 bg-zinc-950">
+    <nav class="flex items-center justify-between px-8 py-6 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md fixed w-full z-50">
         <div class="flex items-center gap-2">
-                        <span class="logo">rckstar</span>
+            <span class="logo">rckstar</span>
         </div>
         <div class="flex items-center gap-8 text-sm font-medium">
             <a href="#" class="nav-link">Home</a>
@@ -54,127 +72,121 @@
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-8 py-16">
+    <!-- Hero Section with Porsche Background -->
+    <section class="hero flex items-center">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative max-w-6xl mx-auto px-8 py-32 text-center z-10">
+            <h1 class="text-7xl font-bold tracking-tighter mb-6">rckstar</h1>
+            <p class="text-2xl text-violet-300 mb-4">Creative Developer & Designer</p>
+            <p class="max-w-xl mx-auto text-zinc-300 text-lg">
+                Building digital experiences with clean code and bold design
+            </p>
+        </div>
+    </section>
 
-        <!-- About Me -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <!-- Main Content (About, Skills, Experience) -->
+    <main class="content-section">
+        <div class="max-w-6xl mx-auto px-8 py-20">
+
+            <!-- About Me -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                <div>
+                    <h2 class="text-5xl font-bold mb-6">About Me</h2>
+                    <p class="text-zinc-300 text-lg leading-relaxed mb-6">
+                        I'm a passionate creative developer and designer with over 5 years of experience 
+                        building digital products that users love. I believe in the power of good design 
+                        and clean code to solve real problems.
+                    </p>
+                    <p class="text-zinc-300 text-lg leading-relaxed mb-6">
+                        When I'm not coding, you'll find me exploring new design trends, contributing to 
+                        open-source projects, or sharing my knowledge through writing and speaking at conferences.
+                    </p>
+                    <p class="text-zinc-300 text-lg leading-relaxed">
+                        I'm always excited to work on projects that challenge me to grow and learn something new.
+                    </p>
+                </div>
+
+                <!-- Cosmic Black Cat -->
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <img 
+                            src="images/cosmic-cat.jpg" 
+                            alt="Cosmic Black Cat" 
+                            class="w-80 lg:w-96 rounded-2xl shadow-2xl drop-shadow-[0_0_40px_#c026d3] transition-all duration-500 hover:scale-105">
+                        
+                        <!-- Decorative stars -->
+                        <div class="absolute -top-8 -right-8 text-6xl text-violet-300 opacity-70 pointer-events-none">✦</div>
+                        <div class="absolute top-12 -left-10 text-5xl text-violet-300 rotate-12 pointer-events-none">✺</div>
+                        <div class="absolute bottom-12 right-20 text-7xl text-violet-300 pointer-events-none">✹</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills & Technologies -->
+            <div class="mb-24">
+                <h2 class="text-4xl font-bold mb-10">Skills &amp; Technologies</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                        <h3 class="text-2xl font-semibold text-center mb-8">Developer</h3>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">HTML</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">CSS</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">JavaScript</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">React</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Tailwind</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                        <h3 class="text-2xl font-semibold text-center mb-8">Designer</h3>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Figma</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">UI/UX</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Blender</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Pixel Art</span>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                        <h3 class="text-2xl font-semibold text-center mb-8">Other</h3>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Git</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Open Source</span>
+                            <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Speaking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
             <div>
-                <h1 class="text-5xl font-bold mb-6">About Me</h1>
-                <p class="text-zinc-300 text-lg leading-relaxed mb-6">
-                    I'm a passionate creative developer and designer with over 5 years of experience 
-                    building digital products that users love. I believe in the power of good design 
-                    and clean code to solve real problems.
-                </p>
-                <p class="text-zinc-300 text-lg leading-relaxed mb-6">
-                    When I'm not coding, you'll find me exploring new design trends, contributing to 
-                    open-source projects, or sharing my knowledge through writing and speaking at conferences.
-                </p>
-                <p class="text-zinc-300 text-lg leading-relaxed">
-                    I'm always excited to work on projects that challenge me to grow and learn something new.
-                </p>
-            </div>
+                <h2 class="text-4xl font-bold mb-10">Experience</h2>
+                <div class="relative pl-12">
+                    <div class="absolute left-6 top-8 bottom-8 w-1 bg-violet-400 rounded-full"></div>
 
-                      <!-- Cosmic Black Cat Image -->
-            <div class="relative flex justify-center lg:justify-end">
-                <div class="relative">
-                    <img 
-                        src="images/cosmic-cat.jpg" 
-                        alt="Cosmic Black Cat" 
-                        class="w-80 lg:w-96 rounded-2xl shadow-2xl drop-shadow-[0_0_40px_#c026d3] transition-all duration-500 hover:scale-105">
-                    
-                    <!-- Decorative glowing stars (cosmic vibe) -->
-                    <div class="absolute -top-8 -right-8 text-6xl text-violet-300 opacity-70 pointer-events-none">✦</div>
-                    <div class="absolute top-12 -left-10 text-5xl text-violet-300 rotate-12 pointer-events-none">✺</div>
-                    <div class="absolute bottom-12 right-20 text-7xl text-violet-300 pointer-events-none">✹</div>
-                </div>
-            </div>
-
-                    <!-- Decorative stars (just like the image) -->
-                    <div class="absolute -top-6 -right-8 text-5xl text-violet-300">✦</div>
-                    <div class="absolute top-8 -left-8 text-4xl text-violet-300 rotate-12">✺</div>
-                    <div class="absolute bottom-8 right-16 text-6xl text-violet-300">✹</div>
-                    <div class="absolute top-1/3 left-4 text-3xl text-violet-300">✧</div>
-                    <div class="absolute bottom-1/4 left-1/2 text-4xl text-violet-300">○</div>
-                    <div class="absolute top-2/3 right-8 text-5xl text-violet-300 rotate-45">+</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Skills & Technologies -->
-        <div class="mt-24">
-            <h2 class="text-4xl font-bold mb-10">Skills &amp; Technologies</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold text-center mb-8">Developer</h3>
-                    <div class="flex flex-wrap gap-3 justify-center">
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                    <div class="flex gap-8 mb-16 relative">
+                        <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
+                        <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
+                            <h3 class="text-2xl font-semibold">Developer</h3>
+                            <p class="text-violet-400 mb-4">at lorem ipsum</p>
+                            <p class="text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
                     </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold text-center mb-8">Developer</h3>
-                    <div class="flex flex-wrap gap-3 justify-center">
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-                    <h3 class="text-2xl font-semibold text-center mb-8">Developer</h3>
-                    <div class="flex flex-wrap gap-3 justify-center">
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Experience -->
-        <div class="mt-24">
-            <h2 class="text-4xl font-bold mb-10">Experience</h2>
-            <div class="relative pl-12">
-                <!-- Vertical line -->
-                <div class="absolute left-6 top-8 bottom-8 w-1 bg-violet-400 rounded-full"></div>
-
-                <!-- 2025 Entry 1 -->
-                <div class="flex gap-8 mb-16 relative">
-                    <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
-                    <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
-                        <h3 class="text-2xl font-semibold">Developer</h3>
-                        <p class="text-violet-400 mb-4">at lorem ipsum</p>
-                        <p class="text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <!-- 2025 Entry 2 -->
-                <div class="flex gap-8 relative">
-                    <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
-                    <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
-                        <h3 class="text-2xl font-semibold">Developer</h3>
-                        <p class="text-violet-400 mb-4">at lorem ipsum</p>
-                        <p class="text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="flex gap-8 relative">
+                        <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
+                        <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
+                            <h3 class="text-2xl font-semibold">Developer</h3>
+                            <p class="text-violet-400 mb-4">at lorem ipsum</p>
+                            <p class="text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="text-center py-8 text-zinc-500 text-sm border-t border-zinc-800">
-        © 2026 rckstar • Built with minimal love on GitHub Pages
+    <footer class="text-center py-8 text-zinc-500 text-sm border-t border-zinc-800 bg-zinc-950">
+        © 2026 rckstar • Built with cosmic speed on GitHub Pages
     </footer>
 </body>
 </html>
