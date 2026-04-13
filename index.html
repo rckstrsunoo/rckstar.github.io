@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | rckstar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .nav-link { transition: all 0.3s; }
+        .nav-link:hover { color: #c026d3; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 border-b border-zinc-800 bg-zinc-950">
+        <div class="flex items-center gap-2">
+            <span class="text-3xl font-bold text-violet-400 tracking-tighter">rckstar</span>
+        </div>
+        <div class="flex items-center gap-8 text-sm font-medium">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link text-violet-400 border-b-2 border-violet-400 pb-1">About</a>
+            <a href="#" class="nav-link">Projects</a>
+            <a href="#" class="nav-link">Blog</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-8 py-16">
+
+        <!-- About Me -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h1 class="text-5xl font-bold mb-6">About Me</h1>
+                <p class="text-zinc-300 text-lg leading-relaxed mb-6">
+                    I'm a passionate creative developer and designer with over 5 years of experience 
+                    building digital products that users love. I believe in the power of good design 
+                    and clean code to solve real problems.
+                </p>
+                <p class="text-zinc-300 text-lg leading-relaxed mb-6">
+                    When I'm not coding, you'll find me exploring new design trends, contributing to 
+                    open-source projects, or sharing my knowledge through writing and speaking at conferences.
+                </p>
+                <p class="text-zinc-300 text-lg leading-relaxed">
+                    I'm always excited to work on projects that challenge me to grow and learn something new.
+                </p>
+            </div>
+
+            <!-- Pixel Cat Illustration -->
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="relative">
+                    <!-- Purple pixel-style cat SVG -->
+                    <svg width="320" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-2xl">
+                        <!-- Body -->
+                        <ellipse cx="100" cy="145" rx="45" ry="35" fill="#a855f7"/>
+                        <!-- Head -->
+                        <ellipse cx="100" cy="95" rx="45" ry="45" fill="#a855f7"/>
+                        <!-- Left Ear -->
+                        <polygon points="65,65 45,30 80,55" fill="#a855f7"/>
+                        <!-- Right Ear -->
+                        <polygon points="135,65 155,30 120,55" fill="#a855f7"/>
+                        <!-- Left Eye -->
+                        <ellipse cx="73" cy="85" rx="10" ry="13" fill="#111827"/>
+                        <!-- Right Eye -->
+                        <ellipse cx="127" cy="85" rx="10" ry="13" fill="#111827"/>
+                        <!-- Eye shines -->
+                        <ellipse cx="70" cy="82" rx="3.5" ry="4" fill="#fff"/>
+                        <ellipse cx="124" cy="82" rx="3.5" ry="4" fill="#fff"/>
+                        <!-- Nose -->
+                        <polygon points="93,105 100,115 107,105" fill="#111827"/>
+                        <!-- Mouth -->
+                        <path d="M95 120 Q100 125 105 120" stroke="#111827" stroke-width="3" fill="none"/>
+                        <!-- Whiskers -->
+                        <path d="M55 115 L75 114" stroke="#111827" stroke-width="2.5"/>
+                        <path d="M53 122 L75 123" stroke="#111827" stroke-width="2.5"/>
+                        <path d="M145 115 L125 114" stroke="#111827" stroke-width="2.5"/>
+                        <path d="M147 122 L125 123" stroke="#111827" stroke-width="2.5"/>
+                        <!-- Tail -->
+                        <path d="M55 165 Q30 175 25 195" stroke="#a855f7" stroke-width="22" stroke-linecap="round" fill="none"/>
+                    </svg>
+
+                    <!-- Decorative stars (just like the image) -->
+                    <div class="absolute -top-6 -right-8 text-5xl text-violet-300">✦</div>
+                    <div class="absolute top-8 -left-8 text-4xl text-violet-300 rotate-12">✺</div>
+                    <div class="absolute bottom-8 right-16 text-6xl text-violet-300">✹</div>
+                    <div class="absolute top-1/3 left-4 text-3xl text-violet-300">✧</div>
+                    <div class="absolute bottom-1/4 left-1/2 text-4xl text-violet-300">○</div>
+                    <div class="absolute top-2/3 right-8 text-5xl text-violet-300 rotate-45">+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills & Technologies -->
+        <div class="mt-24">
+            <h2 class="text-4xl font-bold mb-10">Skills &amp; Technologies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold text-center mb-8">Developer</h3>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold text-center mb-8">Developer</h3>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold text-center mb-8">Developer</h3>
+                    <div class="flex flex-wrap gap-3 justify-center">
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                        <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">html</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="mt-24">
+            <h2 class="text-4xl font-bold mb-10">Experience</h2>
+            <div class="relative pl-12">
+                <!-- Vertical line -->
+                <div class="absolute left-6 top-8 bottom-8 w-1 bg-violet-400 rounded-full"></div>
+
+                <!-- 2025 Entry 1 -->
+                <div class="flex gap-8 mb-16 relative">
+                    <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
+                    <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
+                        <h3 class="text-2xl font-semibold">Developer</h3>
+                        <p class="text-violet-400 mb-4">at lorem ipsum</p>
+                        <p class="text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
+                <!-- 2025 Entry 2 -->
+                <div class="flex gap-8 relative">
+                    <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
+                    <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
+                        <h3 class="text-2xl font-semibold">Developer</h3>
+                        <p class="text-violet-400 mb-4">at lorem ipsum</p>
+                        <p class="text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-zinc-500 text-sm border-t border-zinc-800">
+        © 2026 rckstar • Built with minimal love on GitHub Pages
+    </footer>
+</body>
+</html>
