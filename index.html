@@ -6,11 +6,36 @@
     <title>About Me | rckstar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', system-ui, sans-serif; }
-        .nav-link { transition: all 0.3s; }
-        .nav-link:hover { color: #c026d3; }
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@700;800;900&display=swap');
+        
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+        }
+        
+        .logo {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            font-size: 2.25rem;           /* bigger and bolder */
+            background: linear-gradient(90deg, #c026d3, #a855f7, #c026d3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(192, 38, 211, 0.5);
+            transition: all 0.4s ease;
+        }
+        
+        .logo:hover {
+            text-shadow: 0 0 30px rgba(192, 38, 211, 0.8);
+            transform: scale(1.05);
+        }
+        
+        .nav-link { 
+            transition: all 0.3s; 
+        }
+        .nav-link:hover { 
+            color: #c026d3; 
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -18,7 +43,7 @@
     <!-- Navigation -->
     <nav class="flex items-center justify-between px-8 py-6 border-b border-zinc-800 bg-zinc-950">
         <div class="flex items-center gap-2">
-            <span class="text-3xl font-bold text-violet-400 tracking-tighter">rckstar</span>
+                        <span class="logo">rckstar</span>
         </div>
         <div class="flex items-center gap-8 text-sm font-medium">
             <a href="#" class="nav-link">Home</a>
