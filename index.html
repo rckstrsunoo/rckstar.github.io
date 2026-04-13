@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romero | Portfolio</title>
+    <title>Danielle Romero | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
    
-    <!-- Sacramento for logo + Pacifico for subtitle + Inter -->
+    <!-- Sacramento for logo + Pacifico for subtitle -->
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
    
     <style>
@@ -23,28 +23,22 @@
             font-weight: 400;
             letter-spacing: -0.03em;
             color: #ec4899;
-            text-shadow:
-                0 0 15px rgba(236, 72, 153, 0.7),
-                0 0 35px rgba(236, 72, 153, 0.4);
+            text-shadow: 0 0 15px rgba(236, 72, 153, 0.7), 0 0 35px rgba(236, 72, 153, 0.4);
             transition: all 0.4s ease;
             line-height: 1;
         }
        
         .logo:hover {
-            text-shadow:
-                0 0 25px rgba(236, 72, 153, 0.9),
-                0 0 50px rgba(236, 72, 153, 0.6);
+            text-shadow: 0 0 25px rgba(236, 72, 153, 0.9), 0 0 50px rgba(236, 72, 153, 0.6);
             transform: scale(1.04);
         }
 
-        /* === ONLY THESE TWO LINES GET NEW FONT === */
+        /* Subtitle with nicer cursive */
         .subtitle {
-            font-family: 'Pacifico', cursive;   /* More exciting cursive */
+            font-family: 'Pacifico', cursive;
             font-size: 2.35rem;
             color: #c026d3;
-            text-shadow: 
-                0 0 15px rgba(192, 38, 211, 0.8),
-                0 0 30px rgba(192, 38, 211, 0.5);
+            text-shadow: 0 0 15px rgba(192, 38, 211, 0.8), 0 0 30px rgba(192, 38, 211, 0.5);
             margin-bottom: 0.5rem;
         }
 
@@ -55,13 +49,25 @@
             letter-spacing: 0.05em;
             font-weight: 500;
         }
-        /* ========================================== */
 
         .nav-link {
             transition: all 0.3s;
+            position: relative;
         }
         .nav-link:hover {
             color: #c026d3;
+        }
+        .nav-link.active {
+            color: #c026d3;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #c026d3;
         }
 
         /* Hero with Porsche Background */
@@ -83,34 +89,33 @@
 </head>
 <body class="bg-zinc-950 text-white">
 
-    <!-- Navigation -->
+    <!-- Navigation - Now clickable -->
     <nav class="flex items-center justify-between px-8 py-6 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md fixed w-full z-50">
         <div class="flex items-center gap-2">
             <span class="logo">Danielle Romero</span>
         </div>
         <div class="flex items-center gap-8 text-sm font-medium">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link text-violet-400 border-b-2 border-violet-400 pb-1">About</a>
-            <a href="#" class="nav-link">Projects</a>
-            <a href="#" class="nav-link">Blog</a>
-            <a href="#" class="nav-link">Contact</a>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section with Porsche Background -->
+    <!-- Hero Section -->
     <section class="hero flex items-center">
         <div class="hero-overlay absolute inset-0"></div>
-                <div class="relative max-w-6xl mx-auto px-8 py-32 text-center z-10">
+        <div class="relative max-w-6xl mx-auto px-8 py-32 text-center z-10">
             <h1 class="logo">Danielle Romero</h1>
             <p class="subtitle">Accounting Student</p>
             <p class="tagline">Future Certified Public Accountant</p>
         </div>
     </section>
 
-    <!-- Main Content (About, Skills, Experience) -->
+    <!-- Rest of your content (About Me, Skills, Experience) remains the same -->
     <main class="content-section">
         <div class="max-w-6xl mx-auto px-8 py-20">
-
             <!-- About Me -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
                 <div>
@@ -132,12 +137,8 @@
                 <!-- Cosmic Black Cat -->
                 <div class="relative flex justify-center lg:justify-end">
                     <div class="relative">
-                        <img
-                            src="images/cosmic-cat.jpg"
-                            alt="Cosmic Black Cat"
-                            class="w-80 lg:w-96 rounded-2xl shadow-2xl drop-shadow-[0_0_40px_#c026d3] transition-all duration-500 hover:scale-105">
-                       
-                        <!-- Decorative stars -->
+                        <img src="images/cosmic-cat.jpg" alt="Cosmic Black Cat"
+                             class="w-80 lg:w-96 rounded-2xl shadow-2xl drop-shadow-[0_0_40px_#c026d3] transition-all duration-500 hover:scale-105">
                         <div class="absolute -top-8 -right-8 text-6xl text-violet-300 opacity-70 pointer-events-none">✦</div>
                         <div class="absolute top-12 -left-10 text-5xl text-violet-300 rotate-12 pointer-events-none">✺</div>
                         <div class="absolute bottom-12 right-20 text-7xl text-violet-300 pointer-events-none">✹</div>
@@ -147,7 +148,7 @@
 
             <!-- Skills & Technologies -->
             <div class="mb-24">
-                <h2 class="text-4xl font-bold mb-10">Skills;</h2>
+                <h2 class="text-4xl font-bold mb-10">Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
                         <h3 class="text-2xl font-semibold text-center mb-8">Tax</h3>
@@ -187,16 +188,16 @@
                     <div class="absolute left-6 top-8 bottom-8 w-1 bg-violet-400 rounded-full"></div>
                     <div class="flex gap-8 mb-16 relative">
                         <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
-                        <div class="flex-1 bg-zinc-900 rounded-1xl p-8 pt-2">
-                            <h3 class="text-1xl font-semibold">OJT Tax</h3>
+                        <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
+                            <h3 class="text-xl font-semibold">OJT Tax</h3>
                             <p class="text-violet-400 mb-4">RS Bernaldo Associates</p>
                             <p class="text-zinc-300">Intern.</p>
                         </div>
                     </div>
                     <div class="flex gap-8 relative">
                         <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
-                        <div class="flex-1 bg-zinc-900 rounded-1xl p-8 pt-2">
-                            <h3 class="text-1xl font-semibold">Accounting</h3>
+                        <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
+                            <h3 class="text-xl font-semibold">Accounting</h3>
                             <p class="text-violet-400 mb-4">RS Bernaldo Associates</p>
                             <p class="text-zinc-300">Intern.</p>
                         </div>
