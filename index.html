@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rckstar | Creative Developer</title>
+    <title>rckstar | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Sacramento Cursive Font + Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;500;600;700&display=swap');
         
         body { 
-            font-family: 'Urban Graffiti', system-ui, sans-serif; 
+            font-family: 'Inter', system-ui, sans-serif; 
         }
         
         .logo {
-            font-family: 'Urban Graffiti', sans-serif;
-            font-weight: 900;
-            letter-spacing: -0.05em;
-            font-size: 2.25rem;
-            background: linear-gradient(90deg, #c026d3, #a855f7, #c026d3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(192, 38, 211, 0.5);
+            font-family: 'Sacramento', cursive;
+            font-size: 4.5rem;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            color: #ec4899;              /* vibrant magenta */
+            text-shadow: 
+                0 0 15px rgba(236, 72, 153, 0.7),
+                0 0 35px rgba(236, 72, 153, 0.4);
             transition: all 0.4s ease;
+            line-height: 1;
         }
         
         .logo:hover {
-            text-shadow: 0 0 30px rgba(192, 38, 211, 0.8);
-            transform: scale(1.05);
+            text-shadow: 
+                0 0 25px rgba(236, 72, 153, 0.9),
+                0 0 50px rgba(236, 72, 153, 0.6);
+            transform: scale(1.04);
         }
         
         .nav-link { 
@@ -46,11 +53,9 @@
             min-height: 100vh;
             position: relative;
         }
-
         .hero-overlay {
             background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
         }
-
         .content-section {
             background: #18181b;
         }
@@ -76,7 +81,7 @@
     <section class="hero flex items-center">
         <div class="hero-overlay absolute inset-0"></div>
         <div class="relative max-w-6xl mx-auto px-8 py-32 text-center z-10">
-            <h1 class="text-7xl font-bold tracking-tighter mb-6">rckstar</h1>
+            <h1 class="logo">rckstar</h1>
             <p class="text-2xl text-violet-300 mb-4">Creative Developer & Designer</p>
             <p class="max-w-xl mx-auto text-zinc-300 text-lg">
                 Building digital experiences with clean code and bold design
@@ -93,12 +98,12 @@
                 <div>
                     <h2 class="text-5xl font-bold mb-6">About Me</h2>
                     <p class="text-zinc-300 text-lg leading-relaxed mb-6">
-                        I'm a passionate creative developer and designer with over 5 years of experience 
-                        building digital products that users love. I believe in the power of good design 
+                        I'm a passionate creative developer and designer with over 5 years of experience
+                        building digital products that users love. I believe in the power of good design
                         and clean code to solve real problems.
                     </p>
                     <p class="text-zinc-300 text-lg leading-relaxed mb-6">
-                        When I'm not coding, you'll find me exploring new design trends, contributing to 
+                        When I'm not coding, you'll find me exploring new design trends, contributing to
                         open-source projects, or sharing my knowledge through writing and speaking at conferences.
                     </p>
                     <p class="text-zinc-300 text-lg leading-relaxed">
@@ -109,11 +114,11 @@
                 <!-- Cosmic Black Cat -->
                 <div class="relative flex justify-center lg:justify-end">
                     <div class="relative">
-                        <img 
-                            src="images/cosmic-cat.jpg" 
-                            alt="Cosmic Black Cat" 
+                        <img
+                            src="images/cosmic-cat.jpg"
+                            alt="Cosmic Black Cat"
                             class="w-80 lg:w-96 rounded-2xl shadow-2xl drop-shadow-[0_0_40px_#c026d3] transition-all duration-500 hover:scale-105">
-                        
+                       
                         <!-- Decorative stars -->
                         <div class="absolute -top-8 -right-8 text-6xl text-violet-300 opacity-70 pointer-events-none">✦</div>
                         <div class="absolute top-12 -left-10 text-5xl text-violet-300 rotate-12 pointer-events-none">✺</div>
@@ -162,7 +167,6 @@
                 <h2 class="text-4xl font-bold mb-10">Experience</h2>
                 <div class="relative pl-12">
                     <div class="absolute left-6 top-8 bottom-8 w-1 bg-violet-400 rounded-full"></div>
-
                     <div class="flex gap-8 mb-16 relative">
                         <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
                         <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
@@ -171,7 +175,6 @@
                             <p class="text-zinc-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>
-
                     <div class="flex gap-8 relative">
                         <div class="absolute left-0 w-12 h-12 bg-violet-500 rounded-full flex items-center justify-center font-bold text-xl z-10">2025</div>
                         <div class="flex-1 bg-zinc-900 rounded-3xl p-8 pt-2">
