@@ -15,14 +15,14 @@
        
         body { 
             font-family: 'Inter', system-ui, sans-serif; 
-            scroll-behavior: smooth;   /* Makes clicking nav smooth */
+            scroll-behavior: smooth;
         }
        
         .logo {
             font-family: 'Sacramento', cursive;
-            font-size: 4.5rem;
+            font-size: 2.8rem;           /* Smaller logo as requested */
             font-weight: 400;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
             color: #ec4899;
             text-shadow: 0 0 15px rgba(236, 72, 153, 0.7), 0 0 35px rgba(236, 72, 153, 0.4);
             transition: all 0.4s ease;
@@ -31,7 +31,7 @@
        
         .logo:hover {
             text-shadow: 0 0 25px rgba(236, 72, 153, 0.9), 0 0 50px rgba(236, 72, 153, 0.6);
-            transform: scale(1.04);
+            transform: scale(1.05);
         }
 
         .subtitle {
@@ -98,6 +98,7 @@
             <a href="#home" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 
@@ -115,7 +116,7 @@
     <main class="content-section">
         <div class="max-w-6xl mx-auto px-8 py-20">
 
-            <!-- About Me Section -->
+            <!-- About Section -->
             <section id="about" class="mb-24">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div>
@@ -148,7 +149,7 @@
             </section>
 
             <!-- Skills Section -->
-            <section id="skills">
+            <section id="skills" class="mb-24">
                 <h2 class="text-4xl font-bold mb-10">Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
@@ -179,6 +180,29 @@
                             <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Speaking</span>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="mb-24">
+                <h2 class="text-4xl font-bold mb-10">Contact Me</h2>
+                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-12 max-w-2xl mx-auto text-center">
+                    <p class="text-zinc-300 text-lg mb-8">
+                        I'm currently open to new opportunities, collaborations, or just a friendly chat.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="mailto:your.email@example.com" 
+                           class="px-8 py-4 bg-violet-600 hover:bg-violet-700 transition-colors rounded-3xl font-medium">
+                            Send Email
+                        </a>
+                        <a href="#" 
+                           class="px-8 py-4 border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-zinc-950 transition-colors rounded-3xl font-medium">
+                            LinkedIn
+                        </a>
+                    </div>
+                    <p class="mt-8 text-sm text-zinc-500">
+                        Pasig City, Philippines • Available for freelance &amp; full-time roles
+                    </p>
                 </div>
             </section>
 
