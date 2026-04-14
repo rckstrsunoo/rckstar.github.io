@@ -6,17 +6,17 @@
     <title>Romero|Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  
+ 
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+ 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Pacifico&family=Inter:wght@400;500;600;700&display=swap');
-      
+     
         body {
             font-family: 'Inter', system-ui, sans-serif;
             scroll-behavior: smooth;
         }
-      
+     
         .logo {
             font-family: 'Sacramento', cursive;
             font-size: 2.8rem;
@@ -27,7 +27,7 @@
             transition: all 0.4s ease;
             line-height: 1;
         }
-      
+     
         .logo:hover {
             text-shadow: 0 0 25px rgba(236, 72, 153, 0.9), 0 0 50px rgba(236, 72, 153, 0.6);
             transform: scale(1.05);
@@ -83,14 +83,13 @@
             background: #18181b;
         }
 
-        /* Section Title Professional Highlight */
+        /* Section Title */
         .section-title {
             position: relative;
             display: inline-block;
             padding-bottom: 0.5rem;
             transition: all 0.4s ease;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
@@ -102,7 +101,6 @@
             border-radius: 9999px;
             transition: all 0.4s ease;
         }
-
         .section-title:hover::after {
             width: 100%;
             box-shadow: 0 0 15px rgba(192, 38, 211, 0.6);
@@ -110,23 +108,17 @@
 
         /* Cosmic Black Cat Animation */
         .cosmic-cat {
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
             filter: drop-shadow(0 0 40px #c026d3);
         }
-
         .cosmic-cat:hover {
             transform: scale(1.08) translateY(-12px) rotate(2deg);
             filter: drop-shadow(0 0 60px #c026d3) brightness(1.15);
             animation: cosmicGlow 2s ease-in-out infinite alternate;
         }
-
         @keyframes cosmicGlow {
-            from {
-                filter: drop-shadow(0 0 40px #c026d3) brightness(1);
-            }
-            to {
-                filter: drop-shadow(0 0 80px #a855f7) brightness(1.25);
-            }
+            from { filter: drop-shadow(0 0 40px #c026d3) brightness(1); }
+            to { filter: drop-shadow(0 0 80px #a855f7) brightness(1.25); }
         }
 
         /* Decorative stars */
@@ -134,10 +126,34 @@
             pointer-events: none;
             animation: twinkle 3s ease-in-out infinite;
         }
-
         @keyframes twinkle {
             0%, 100% { opacity: 0.6; }
             50% { opacity: 1; }
+        }
+
+        /* ====================== SCROLL UP LIFT ANIMATION ====================== */
+        .scroll-lift {
+            transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+                        opacity 0.6s ease;
+            will-change: transform;
+        }
+
+        .scroll-lift.lifted {
+            transform: translateY(-25px) scale(1.03);
+            filter: drop-shadow(0 30px 40px rgba(192, 38, 211, 0.3));
+        }
+
+        .hero-content {
+            transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .hero-content.lifted {
+            transform: translateY(-45px);
+        }
+
+        .cosmic-cat.lifted {
+            transform: scale(1.09) translateY(-40px) rotate(4deg);
+            filter: drop-shadow(0 45px 70px rgba(192, 38, 211, 0.5)) brightness(1.25);
         }
     </style>
 </head>
@@ -159,7 +175,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero flex items-center">
         <div class="hero-overlay absolute inset-0"></div>
-        <div class="relative max-w-6xl mx-auto px-8 py-32 text-center z-10">
+        <div class="hero-content relative max-w-6xl mx-auto px-8 py-32 text-center z-10">
             <h1 class="logo">Danielle Iea E. Romero</h1>
             <p class="subtitle">Accounting Intern Student</p>
             <p class="tagline">Future Certified Public Accountant</p>
@@ -173,7 +189,7 @@
             <!-- About Section -->
             <section id="about" class="mb-24">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div>
+                    <div class="scroll-lift">
                         <h2 class="section-title text-5xl font-bold mb-6">About Me</h2>
                         <p class="text-zinc-300 text-lg leading-relaxed mb-6">
                             I'm a passionate creative developer and designer with over 5 years of experience
@@ -189,12 +205,11 @@
                         </p>
                     </div>
 
-                    <!-- Cosmic Black Cat with Animation -->
+                    <!-- Cosmic Black Cat -->
                     <div class="relative flex justify-center lg:justify-end">
                         <div class="relative group">
                             <img src="images/cosmic-cat.jpg" alt="Cosmic Black Cat"
                                  class="cosmic-cat w-80 lg:w-96 rounded-2xl shadow-2xl">
-
                             <!-- Decorative Stars -->
                             <div class="absolute -top-8 -right-8 text-6xl text-violet-300 opacity-70 star">✦</div>
                             <div class="absolute top-12 -left-10 text-5xl text-violet-300 rotate-12 star" style="animation-delay: 0.8s;">✺</div>
@@ -204,11 +219,11 @@
                 </div>
             </section>
 
-            <!-- Skills Section -->
+            <!-- Skills & Contact sections remain the same -->
             <section id="skills" class="mb-24">
                 <h2 class="section-title text-4xl font-bold mb-10">Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-violet-500 transition-colors">
+                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-violet-500 transition-colors scroll-lift">
                         <h3 class="text-2xl font-semibold text-center mb-8">Tax</h3>
                         <div class="flex flex-wrap gap-3 justify-center">
                             <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Tax Compliance and Reporting</span>
@@ -220,7 +235,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-violet-500 transition-colors">
+                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-violet-500 transition-colors scroll-lift">
                         <h3 class="text-2xl font-semibold text-center mb-8">Accounting</h3>
                         <div class="flex flex-wrap gap-3 justify-center">
                             <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">Financial Accounting</span>
@@ -230,7 +245,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-violet-500 transition-colors">
+                    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-violet-500 transition-colors scroll-lift">
                         <h3 class="text-2xl font-semibold text-center mb-8">Auditing</h3>
                         <div class="flex flex-wrap gap-3 justify-center">
                             <span class="px-6 py-2 border border-violet-400 text-violet-400 rounded-3xl text-sm font-medium">External Audits</span>
@@ -241,10 +256,9 @@
                 </div>
             </section>
 
-            <!-- Contact Section -->
             <section id="contact" class="mb-24">
                 <h2 class="section-title text-4xl font-bold mb-10">Contact</h2>
-                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-12 max-w-2xl mx-auto text-center hover:border-violet-500 transition-colors">
+                <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-12 max-w-2xl mx-auto text-center hover:border-violet-500 transition-colors scroll-lift">
                     <p class="text-zinc-300 text-lg mb-8">
                         I'm currently open to new opportunities and collaborations.
                     </p>
@@ -269,5 +283,53 @@
     <footer class="text-center py-8 text-zinc-500 text-sm border-t border-zinc-800 bg-zinc-950">
         © 2026 Danielle Romero
     </footer>
+
+    <!-- Scroll Lift Animation Script -->
+    <script>
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateScrollAnimations() {
+            const scrollY = window.scrollY;
+            const scrollingUp = scrollY < lastScrollY;
+
+            // Hero
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                scrollingUp && scrollY < 400 
+                    ? heroContent.classList.add('lifted') 
+                    : heroContent.classList.remove('lifted');
+            }
+
+            // Cosmic Cat
+            const cat = document.querySelector('.cosmic-cat');
+            if (cat) {
+                scrollingUp ? cat.classList.add('lifted') : cat.classList.remove('lifted');
+            }
+
+            // All scroll-lift elements
+            document.querySelectorAll('.scroll-lift').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (scrollingUp && rect.top < window.innerHeight * 0.85) {
+                    el.classList.add('lifted');
+                } else if (!scrollingUp) {
+                    el.classList.remove('lifted');
+                }
+            });
+
+            lastScrollY = scrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollAnimations);
+                ticking = true;
+            }
+        });
+
+        // Initial load
+        window.addEventListener('load', updateScrollAnimations);
+    </script>
 </body>
 </html>
